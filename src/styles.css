@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+/* Form */
+.form-group{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.form-group.col{
+    flex-direction: column;
+}
+
+.form-group.row{
+    flex-direction: row;
+}
+
+/* Margin */
+.mt-4{
+    margin-top: 8px;
+}
+
+.mb-4{
+    margin-bottom: 8px;
+}
+
+/* Color */
+.txt-red{
+    color: red;
+}

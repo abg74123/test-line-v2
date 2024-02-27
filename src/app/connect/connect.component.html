@@ -1,0 +1,19 @@
+<p-card>
+    <ng-template pTemplate="header">
+        <h4>Line Login Connect</h4>
+    </ng-template>
+    <form [formGroup]="formConnect" (ngSubmit)="connect()">
+        <div class="form-group col">
+            <label for="text_id">Channel ID <span class="txt-red">*</span></label>
+            <input id="text_id" type="text" formControlName="channelId" pInputText required />
+        </div>
+        <div class="form-group col">
+            <label for="txt_secret">Channel secret <span class="txt-red">*</span></label>
+            <input id="txt_secret" type="text" formControlName="channelSecretId" pInputText required />
+        </div>
+        <button *ngIf="!(lineConnect$ | async) else btn_profile" pButton type="submit" label="Connect"></button>
+        <ng-template #btn_profile>
+            <button pButton type="button" label="profile" class="p-button-outlined" routerLink="profile"></button>
+        </ng-template>
+    </form>
+</p-card>
