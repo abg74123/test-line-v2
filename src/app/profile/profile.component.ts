@@ -12,7 +12,7 @@ import { BehaviorSubject, mergeMap, tap } from 'rxjs';
 export class ProfileComponent implements OnInit {
   profile$ = new BehaviorSubject(null)
   prefixLine = "https://access.line.me/oauth2/v2.1/authorize"
-  redirectUri = "http://localhost:4200/profile"
+  redirectUri = "https://boss-lineauth.netlify.app/profile"
 
   constructor(
     private line:LineService,
@@ -41,7 +41,7 @@ export class ProfileComponent implements OnInit {
       body = body.set('code', code);
       body = body.set('client_id', channelId);
       body = body.set('client_secret', channelSecretId);
-      body = body.set('redirect_uri', "http://localhost:4200/profile");
+      body = body.set('redirect_uri', "https://boss-lineauth.netlify.app/profile");
 
       this.http.post(`https://api.line.me/oauth2/v2.1/token`,body,{headers}).pipe(
         mergeMap((res:any) => {
