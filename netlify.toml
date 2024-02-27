@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/test-line"
+  publish = "dist/test-line-v2"
 [[redirects]]
   from = "/*"
   to = "/index.html"
