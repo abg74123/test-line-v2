@@ -1,10 +1,18 @@
 import { BehaviorSubject } from "rxjs";
+import {HttpClient} from "@angular/common/http";
+import {Injectable} from "@angular/core";
+import {Router} from "@angular/router";
 
+@Injectable({
+  providedIn: 'root',
+})
 
 export class LineService {
     private lineConnect = new BehaviorSubject(null)
     lineConnect$ = this.lineConnect.asObservable()
 
+  constructor(public http:HttpClient,public router: Router) {
+  }
 
     set setLineConnect(connect:any){
          this.lineConnect.next(connect)

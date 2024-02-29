@@ -1,3 +1,25 @@
+
+<hr>
+<h4>Channel Connect</h4>
 <pre>
-    {{profile$ | async | json}}
+  {{lineConnect | json}}
 </pre>
+<hr>
+<hr>
+<h4>Token</h4>
+<pre>
+    accessToken: {{accessToken}}<br>
+    clientId: {{clientId}}<br>
+    idToken: {{idToken}}
+</pre>
+<hr>
+<h4>Profile</h4>
+<pre>
+  <div *ngIf="profile$ | async as profile">
+<!--<p-avatar *ngIf="profile.picture" [image]="profile.picture" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>-->
+
+      {{profile | json}}
+
+  </div>
+</pre>
+<hr>

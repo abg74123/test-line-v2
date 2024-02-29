@@ -12,16 +12,19 @@ import {CardModule} from 'primeng/card';
 import {InputTextModule} from 'primeng/inputtext';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ConnectComponent } from './connect/connect.component';
-import { LineService } from './core/services/line.service';
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { HttpClientModule } from '@angular/common/http';
+import { AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
 
 const primeng = [
   ButtonModule,
   CardModule,
   InputTextModule,
-  ToastModule
+  ToastModule,
+  AvatarModule,
+  AvatarGroupModule
 ]
 
 @NgModule({
@@ -39,7 +42,7 @@ const primeng = [
     HttpClientModule,
     ...primeng
   ],
-  providers: [LineService,MessageService],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
