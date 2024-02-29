@@ -27,7 +27,7 @@ export interface IGetProfile {
 export class AuthService extends LineService {
 
   prefixLine = "https://access.line.me/oauth2/v2.1/authorize"
-  redirectUri = "http://localhost:4200/profile"
+  redirectUri = "https://boss-lineauth.netlify.app/profile"
 
   get getAccessToken() {
     localStorage.getItem('connect')
